@@ -18,4 +18,6 @@ spec:
     syncOptions:
     - CreateNamespace=true
 
-    automated: null  # Deshabilita la sincronización automática
+    automated:
+      selfHeal: true
+      prune: true
