@@ -17,4 +17,15 @@ spec:
         image: eddyedged/argocd-app:1.2
         ports:
         - containerPort: 8080
+      env:
+      - name: MY_SECRET_USERNAME
+        valueFrom:
+          secretKeyRef:
+            name: my-secret
+            key: username
+      - name: MY_SECRET_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: my-secret
+            key: password
 
